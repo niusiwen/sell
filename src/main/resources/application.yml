@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.1.210/nsw-sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.1.210
+    port: 6379
+server:
+  servlet:
+    context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##    path: /var/log/tomcat/
+#    file: E:/var/log/tomcat/sell.log
+#    level:
+#      com.nsw.LoggerTest: debug
+
+#公众号相关配置
+wechat:
+  mpAppId: wxd898fcb01713c658
+  mpAppSecret: 47ccc303338cee6e62894fxxxxxxxxxxx
+  mchId: 123
+  mchKey: abc
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
+
+#项目相关地址配置
+project-url:
+  wechatMpAuthorize: http://sell.natapp4.cc
+  wechatOpenAuthorize: http://sell.natapp4.cc
+  sell: http://sell.natapp4.cc
